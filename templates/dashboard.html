@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>Inventory Global</h2>
+
+    {% if role == 'gamemaster' %}
+    <a href="/create_inventory">+ Create Inventory</a>
+    {% endif %}
+
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="topbar">
+    <h2>Dashboard</h2>
+</div>
+
+<div class="main">
+
+    <div class="card-container center">
+
+        {% for item in inventory %}
+        <a class="card" href="/inventory/{{ item.id }}">
+            <h3>{{ item.employee_name }}</h3>
+        </a>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

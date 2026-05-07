@@ -1,0 +1,206 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f1f5f9;
+    color:#0f172a;
+}
+
+/* =======================
+   LOGIN PAGE
+======================= */
+.login-body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1e3a8a,#60a5fa);
+}
+
+.login-box{
+    width:360px;
+    background:#ffffff;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.login-box h1{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+/* =======================
+   INPUT
+======================= */
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:1px solid #cbd5e1;
+    border-radius:6px;
+    background:#f8fafc;
+    color:#0f172a;
+    outline:none;
+}
+
+input:focus, textarea:focus{
+    border-color:#3b82f6;
+}
+
+/* =======================
+   BUTTON
+======================= */
+button{
+    margin-top:15px;
+    width:100%;
+    padding:10px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+/* =======================
+   SIDEBAR (SLIM KEKAL)
+======================= */
+.sidebar{
+    width:125px;
+    height:100vh;
+    background:#1e3a8a;
+    position:fixed;
+    padding:10px;
+    color:white;
+    top:0;
+    left:0;
+}
+
+.sidebar h2{
+    font-size:14px;
+    margin-bottom:12px;
+    text-align:center;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    margin-top:10px;
+    text-decoration:none;
+    padding:8px;
+    border-radius:6px;
+    background:rgba(255,255,255,0.1);
+    transition:0.3s;
+    font-size:12px;
+    text-align:center;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.2);
+}
+
+/* =======================
+   TOPBAR (BACK TO SIMPLE STYLE)
+======================= */
+.topbar{
+    margin-left:125px;
+    padding:15px 20px;
+    background:#ffffff;
+    color:#1e3a8a;
+    font-size:20px;
+    font-weight:bold;
+    border-bottom:1px solid #e2e8f0;
+}
+
+/* =======================
+   MAIN CONTENT
+======================= */
+.main{
+    margin-left:125px;
+    padding:20px;
+}
+
+/* =======================
+   DASHBOARD CARDS
+======================= */
+.card-container{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.center{
+    justify-content:center;
+    margin-top:40px;
+}
+
+.card{
+    background:#ffffff;
+    padding:20px;
+    border-radius:10px;
+    width:180px;
+    text-align:center;
+    text-decoration:none;
+    color:#1e3a8a;
+    border:1px solid #e2e8f0;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#eff6ff;
+}
+
+/* =======================
+   INVENTORY TABLE
+======================= */
+.inventory-table{
+    width:85%;
+    margin:auto;
+    background:#ffffff;
+    border-collapse:collapse;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.inventory-table td{
+    padding:12px;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.inventory-table td:first-child{
+    color:#1e3a8a;
+    width:30%;
+    font-weight:bold;
+    vertical-align:top;
+}
+
+/* =======================
+   APPS BOX
+======================= */
+.apps-box{
+    width:100%;
+    min-height:220px;
+    resize:vertical;
+    background:#f8fafc;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    padding:10px;
+    font-family:Arial;
+    color:#0f172a;
+}
+
+/* =======================
+   BUTTON CENTER
+======================= */
+.main button{
+    width:200px;
+    margin:20px auto;
+    display:block;
+}

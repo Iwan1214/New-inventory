@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>Inventory Global</h2>
+    <a href="/dashboard">Back</a>
+</div>
+
+<div class="main">
+
+<h2>{{ data.employee_name }}</h2>
+
+<form method="POST">
+
+<table class="inventory-table">
+
+<tr>
+<td>Name</td>
+<td><input name="employee_name" value="{{ data.employee_name }}"></td>
+</tr>
+
+<tr>
+<td>Laptop</td>
+<td><input name="laptop_model" value="{{ data.laptop_model }}"></td>
+</tr>
+
+<tr>
+<td>Windows</td>
+<td><input name="windows_model" value="{{ data.windows_model }}"></td>
+</tr>
+
+<tr>
+<td>CPU</td>
+<td><input name="cpu" value="{{ data.cpu }}"></td>
+</tr>
+
+<tr>
+<td>GPU</td>
+<td><input name="gpu" value="{{ data.gpu }}"></td>
+</tr>
+
+<tr>
+<td>RAM</td>
+<td><input name="ram" value="{{ data.ram }}"></td>
+</tr>
+
+<tr>
+<td>Storage</td>
+<td><input name="storage" value="{{ data.storage }}"></td>
+</tr>
+
+<tr>
+<td style="vertical-align:top;">Apps</td>
+<td>
+    <textarea class="apps-box" name="installed_apps">{{ data.installed_apps }}</textarea>
+</td>
+</tr>
+
+</table>
+
+<button type="submit">Save</button>
+
+</form>
+
+</div>
+
+<!-- AUTO RESIZE SCRIPT -->
+<script>
+const textarea = document.querySelector('.apps-box');
+
+function autoResize(el){
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+}
+
+textarea.addEventListener("input", function(){
+    autoResize(this);
+});
+
+// run on page load
+autoResize(textarea);
+</script>
+
+</body>
+</html>
